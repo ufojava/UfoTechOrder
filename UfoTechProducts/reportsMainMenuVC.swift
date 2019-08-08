@@ -16,7 +16,6 @@ class reportsMainMenuVC: UIViewController {
     @IBOutlet weak var reportsTitleManuLabel: UILabel!
     @IBOutlet weak var allProduceOutletMenuButton: UIButton!
     @IBOutlet weak var allOrdersOutletButton: UIButton!
-    @IBOutlet weak var singleProduceOutletButton: UIButton!
     @IBOutlet weak var singleOrdersOutletButton: UIButton!
     @IBOutlet weak var buttonFrameImageviewOutlet: UIImageView!
     @IBOutlet weak var stockQtyOutletButton: UIButton!
@@ -134,13 +133,6 @@ class reportsMainMenuVC: UIViewController {
         allOrdersOutletButton.layer.shadowRadius = 5
         allOrdersOutletButton.layer.cornerRadius = 10
         allOrdersOutletButton.layer.shadowOffset = CGSize(width: 3, height: 3)
-        
-        singleProduceOutletButton.setTitleColor(.blue, for: .normal)
-        singleProduceOutletButton.backgroundColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
-        singleProduceOutletButton.layer.shadowOpacity = 1
-        singleProduceOutletButton.layer.shadowRadius = 5
-        singleProduceOutletButton.layer.cornerRadius = 10
-        singleProduceOutletButton.layer.shadowOffset = CGSize(width: 3, height: 3)
         
         singleOrdersOutletButton.setTitleColor(.blue, for: .normal)
         singleOrdersOutletButton.backgroundColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)

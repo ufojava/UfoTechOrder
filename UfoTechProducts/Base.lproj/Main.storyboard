@@ -606,7 +606,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r2r-Nn-oUn">
-                                <rect key="frame" x="109" y="334" width="197" height="394"/>
+                                <rect key="frame" x="109" y="334" width="197" height="328"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fxd-bi-0X4">
                                 <rect key="frame" x="20" y="145" width="123" height="116"/>
@@ -630,7 +630,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRh-Ht-raU">
-                                <rect key="frame" x="141" y="559" width="131" height="36"/>
+                                <rect key="frame" x="142" y="569" width="131" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="wmC-qF-TCS"/>
                                 </constraints>
@@ -638,28 +638,6 @@
                                 <state key="normal" title="Orders Srch"/>
                                 <connections>
                                     <action selector="sarchOrdersReportActionButton:" destination="ywm-0d-Xya" eventType="touchUpInside" id="md0-ka-x6y"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rh-gj-aLs">
-                                <rect key="frame" x="141" y="422" width="131" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="KME-Kr-r2g"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="All Orders"/>
-                                <connections>
-                                    <action selector="allOrdersReportActionButton:" destination="ywm-0d-Xya" eventType="touchUpInside" id="5fZ-Ez-tbt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4t-Fp-7zx">
-                                <rect key="frame" x="141" y="483" width="131" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="05D-zM-hVR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Produce Srch"/>
-                                <connections>
-                                    <action selector="searchProduceReportActionButton:" destination="ywm-0d-Xya" eventType="touchUpInside" id="MNI-Mo-gTy"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="___________________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owd-mf-FKM">
@@ -687,7 +665,7 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPX-Y0-sF4">
-                                <rect key="frame" x="141" y="635" width="131" height="36"/>
+                                <rect key="frame" x="141" y="430" width="131" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Ghf-3h-geP"/>
                                 </constraints>
@@ -698,44 +676,52 @@
                                     <action selector="stockQuantityActionButton:" destination="ywm-0d-Xya" eventType="touchUpInside" id="7I5-ku-0tb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rh-gj-aLs">
+                                <rect key="frame" x="141" y="494" width="131" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="KME-Kr-r2g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="All Orders"/>
+                                <connections>
+                                    <action selector="allOrdersReportActionButton:" destination="ywm-0d-Xya" eventType="touchUpInside" id="5fZ-Ez-tbt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sWU-dN-aQo" firstAttribute="trailing" secondItem="7rh-gj-aLs" secondAttribute="trailing" id="4j7-YM-0ex"/>
-                            <constraint firstItem="7rh-gj-aLs" firstAttribute="trailing" secondItem="M4t-Fp-7zx" secondAttribute="trailing" id="4qn-uj-lyy"/>
                             <constraint firstItem="owd-mf-FKM" firstAttribute="trailing" secondItem="GEj-Bo-p8k" secondAttribute="trailing" id="5Tg-ZZ-ASc"/>
-                            <constraint firstItem="PRh-Ht-raU" firstAttribute="top" secondItem="M4t-Fp-7zx" secondAttribute="bottom" constant="40" id="AEm-Yz-yja"/>
                             <constraint firstItem="Fxd-bi-0X4" firstAttribute="centerY" secondItem="KZg-7Q-xKl" secondAttribute="centerY" constant="-0.5" id="ATc-kU-gch"/>
-                            <constraint firstItem="M4t-Fp-7zx" firstAttribute="leading" secondItem="PRh-Ht-raU" secondAttribute="leading" id="Am2-Wr-ZA8"/>
                             <constraint firstItem="owd-mf-FKM" firstAttribute="leading" secondItem="Fxd-bi-0X4" secondAttribute="leading" id="CFh-80-BAK"/>
-                            <constraint firstItem="r2r-Nn-oUn" firstAttribute="centerX" secondItem="M4t-Fp-7zx" secondAttribute="centerX" constant="1" id="CJS-C1-YGO"/>
                             <constraint firstItem="r2r-Nn-oUn" firstAttribute="top" secondItem="owd-mf-FKM" secondAttribute="bottom" constant="40" id="ChD-di-gML"/>
                             <constraint firstItem="7N4-Ak-VqO" firstAttribute="leading" secondItem="c1P-rb-aq4" secondAttribute="leading" id="DYk-Nl-apm"/>
-                            <constraint firstItem="bCa-zC-FWL" firstAttribute="bottom" secondItem="PRh-Ht-raU" secondAttribute="bottom" constant="267" id="FcQ-fx-smZ"/>
-                            <constraint firstItem="KPX-Y0-sF4" firstAttribute="top" secondItem="PRh-Ht-raU" secondAttribute="bottom" constant="40" id="Fcn-zK-CXo"/>
-                            <constraint firstItem="M4t-Fp-7zx" firstAttribute="top" secondItem="7rh-gj-aLs" secondAttribute="bottom" constant="25" id="GSm-pX-rHz"/>
-                            <constraint firstItem="GEj-Bo-p8k" firstAttribute="top" secondItem="r2r-Nn-oUn" secondAttribute="bottom" constant="40" id="Ivw-Jl-SdQ"/>
-                            <constraint firstItem="M4t-Fp-7zx" firstAttribute="trailing" secondItem="PRh-Ht-raU" secondAttribute="trailing" id="JVa-aZ-Faf"/>
+                            <constraint firstItem="bCa-zC-FWL" firstAttribute="bottom" secondItem="PRh-Ht-raU" secondAttribute="bottom" constant="257" id="FcQ-fx-smZ"/>
+                            <constraint firstItem="KPX-Y0-sF4" firstAttribute="top" secondItem="PRh-Ht-raU" secondAttribute="bottom" constant="-175" id="Fcn-zK-CXo"/>
+                            <constraint firstItem="GEj-Bo-p8k" firstAttribute="top" secondItem="r2r-Nn-oUn" secondAttribute="bottom" constant="106" id="Ivw-Jl-SdQ"/>
+                            <constraint firstItem="r2r-Nn-oUn" firstAttribute="centerX" secondItem="PRh-Ht-raU" secondAttribute="centerX" id="JKK-kD-L38"/>
                             <constraint firstItem="r2r-Nn-oUn" firstAttribute="leading" secondItem="bCa-zC-FWL" secondAttribute="leading" constant="109" id="Jlk-hV-2uZ"/>
+                            <constraint firstItem="KPX-Y0-sF4" firstAttribute="trailing" secondItem="7rh-gj-aLs" secondAttribute="trailing" id="LGU-Q5-pDS"/>
                             <constraint firstItem="owd-mf-FKM" firstAttribute="leading" secondItem="GEj-Bo-p8k" secondAttribute="leading" id="Lk8-a1-Atk"/>
                             <constraint firstItem="Fxd-bi-0X4" firstAttribute="leading" secondItem="c1P-rb-aq4" secondAttribute="leadingMargin" id="Os5-uo-xbf"/>
                             <constraint firstItem="7N4-Ak-VqO" firstAttribute="centerX" secondItem="owd-mf-FKM" secondAttribute="centerX" id="POd-hi-2Ih"/>
                             <constraint firstItem="owd-mf-FKM" firstAttribute="centerX" secondItem="sWU-dN-aQo" secondAttribute="centerX" id="Pis-zp-9MO"/>
                             <constraint firstItem="r2r-Nn-oUn" firstAttribute="top" secondItem="Fxd-bi-0X4" secondAttribute="bottom" constant="73" id="Qh2-iy-Ybh"/>
-                            <constraint firstItem="bCa-zC-FWL" firstAttribute="bottom" secondItem="r2r-Nn-oUn" secondAttribute="bottom" constant="134" id="Rwv-oy-ZTE"/>
+                            <constraint firstItem="bCa-zC-FWL" firstAttribute="bottom" secondItem="r2r-Nn-oUn" secondAttribute="bottom" constant="200" id="Rwv-oy-ZTE"/>
                             <constraint firstItem="KZg-7Q-xKl" firstAttribute="top" secondItem="bCa-zC-FWL" secondAttribute="top" constant="121" id="UMe-S8-7S6"/>
-                            <constraint firstItem="7rh-gj-aLs" firstAttribute="top" secondItem="sWU-dN-aQo" secondAttribute="bottom" constant="28" id="V3B-jv-HpQ"/>
+                            <constraint firstItem="7rh-gj-aLs" firstAttribute="top" secondItem="sWU-dN-aQo" secondAttribute="bottom" constant="100" id="V3B-jv-HpQ"/>
                             <constraint firstItem="sWU-dN-aQo" firstAttribute="centerX" secondItem="c1P-rb-aq4" secondAttribute="centerX" constant="-0.5" id="W5V-cr-3Qb"/>
                             <constraint firstItem="bCa-zC-FWL" firstAttribute="trailing" secondItem="KZg-7Q-xKl" secondAttribute="trailing" constant="128" id="arP-rS-lnr"/>
                             <constraint firstItem="bCa-zC-FWL" firstAttribute="bottom" secondItem="Fxd-bi-0X4" secondAttribute="bottom" constant="601" id="fBG-wj-YJJ"/>
                             <constraint firstItem="Fxd-bi-0X4" firstAttribute="top" secondItem="bCa-zC-FWL" secondAttribute="top" constant="101" id="heg-mm-3X6"/>
                             <constraint firstItem="7N4-Ak-VqO" firstAttribute="top" secondItem="bCa-zC-FWL" secondAttribute="top" constant="25" id="hfz-Bw-WkM"/>
-                            <constraint firstItem="KPX-Y0-sF4" firstAttribute="leading" secondItem="PRh-Ht-raU" secondAttribute="leading" id="oSL-4m-Sbk"/>
+                            <constraint firstItem="KPX-Y0-sF4" firstAttribute="leading" secondItem="PRh-Ht-raU" secondAttribute="leading" constant="-1" id="oSL-4m-Sbk"/>
                             <constraint firstItem="sWU-dN-aQo" firstAttribute="leading" secondItem="7rh-gj-aLs" secondAttribute="leading" id="qqK-fc-QWr"/>
-                            <constraint firstItem="KPX-Y0-sF4" firstAttribute="trailing" secondItem="PRh-Ht-raU" secondAttribute="trailing" id="rHX-Rw-cfn"/>
-                            <constraint firstItem="7rh-gj-aLs" firstAttribute="leading" secondItem="M4t-Fp-7zx" secondAttribute="leading" id="sVd-yM-Cms"/>
+                            <constraint firstItem="KPX-Y0-sF4" firstAttribute="trailing" secondItem="PRh-Ht-raU" secondAttribute="trailing" constant="-1" id="rHX-Rw-cfn"/>
+                            <constraint firstItem="7rh-gj-aLs" firstAttribute="top" secondItem="KPX-Y0-sF4" secondAttribute="bottom" constant="28" id="sSD-4M-1mv"/>
                             <constraint firstItem="sWU-dN-aQo" firstAttribute="leading" secondItem="bCa-zC-FWL" secondAttribute="leading" constant="141" id="xXG-5E-QBR"/>
                             <constraint firstItem="KZg-7Q-xKl" firstAttribute="leading" secondItem="Fxd-bi-0X4" secondAttribute="trailing" constant="8" id="ziX-Kw-Wgd"/>
+                            <constraint firstItem="KPX-Y0-sF4" firstAttribute="leading" secondItem="7rh-gj-aLs" secondAttribute="leading" id="ztT-zY-A1E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bCa-zC-FWL"/>
                     </view>
@@ -746,13 +732,12 @@
                         <outlet property="reportsImageOutletImageView" destination="Fxd-bi-0X4" id="VH3-Ky-zgq"/>
                         <outlet property="reportsTitleManuLabel" destination="KZg-7Q-xKl" id="oL3-ds-GWN"/>
                         <outlet property="singleOrdersOutletButton" destination="PRh-Ht-raU" id="9rR-yr-UtG"/>
-                        <outlet property="singleProduceOutletButton" destination="M4t-Fp-7zx" id="h3Q-el-13x"/>
                         <outlet property="stockQtyOutletButton" destination="KPX-Y0-sF4" id="0KU-qV-Ytk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hDL-Sn-Shd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-75" y="-1786"/>
+            <point key="canvasLocation" x="-75.362318840579718" y="-1786.6071428571427"/>
         </scene>
         <!--Order FormVC-->
         <scene sceneID="IZr-Ct-txV">
