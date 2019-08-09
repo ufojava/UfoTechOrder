@@ -19,6 +19,8 @@
 		03C95BB522E274A00006F679 /* AllReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C95BB422E274A00006F679 /* AllReportVC.swift */; };
 		03C95BB722E3B2160006F679 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C95BB622E3B2160006F679 /* ReportTableViewCell.swift */; };
 		03C95BBB22E4B53D0006F679 /* StockQuantity_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C95BBA22E4B53D0006F679 /* StockQuantity_VC.swift */; };
+		03E29A7B22FCABE2007D97E8 /* ordersTableReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E29A7A22FCABE2007D97E8 /* ordersTableReportVC.swift */; };
+		03E29A7D22FCACE9007D97E8 /* ordersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E29A7C22FCACE9007D97E8 /* ordersTableViewCell.swift */; };
 		03EEB3A022EB89A000C6278E /* SearchFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EEB39F22EB89A000C6278E /* SearchFormVC.swift */; };
 		03EEB3A222EF70F700C6278E /* OrderForm_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EEB3A122EF70F700C6278E /* OrderForm_VC.swift */; };
 		03EEB3A422F476BB00C6278E /* reportsMainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EEB3A322F476BB00C6278E /* reportsMainMenuVC.swift */; };
@@ -39,6 +41,8 @@
 		03C95BB422E274A00006F679 /* AllReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllReportVC.swift; sourceTree = "<group>"; };
 		03C95BB622E3B2160006F679 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 		03C95BBA22E4B53D0006F679 /* StockQuantity_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuantity_VC.swift; sourceTree = "<group>"; };
+		03E29A7A22FCABE2007D97E8 /* ordersTableReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ordersTableReportVC.swift; sourceTree = "<group>"; };
+		03E29A7C22FCACE9007D97E8 /* ordersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ordersTableViewCell.swift; sourceTree = "<group>"; };
 		03EEB39F22EB89A000C6278E /* SearchFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormVC.swift; sourceTree = "<group>"; };
 		03EEB3A122EF70F700C6278E /* OrderForm_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderForm_VC.swift; sourceTree = "<group>"; };
 		03EEB3A322F476BB00C6278E /* reportsMainMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reportsMainMenuVC.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				03236C4D22DE898100F0C3DA /* UfoTech_Merchants.swift */,
 				03236C3822DE895400F0C3DA /* AppDelegate.swift */,
 				03236C3C22DE895400F0C3DA /* Main.storyboard */,
+				03E29A7C22FCACE9007D97E8 /* ordersTableViewCell.swift */,
+				03E29A7A22FCABE2007D97E8 /* ordersTableReportVC.swift */,
 				03C01DFA22F8E785001B77DE /* prodOrdersUpdate.swift */,
 				03C01DF622F5DDC5001B77DE /* AllOrdersReport_VC.swift */,
 				03EEB3A322F476BB00C6278E /* reportsMainMenuVC.swift */,
@@ -167,6 +173,7 @@
 			files = (
 				03EEB3A022EB89A000C6278E /* SearchFormVC.swift in Sources */,
 				03236C5022DE93E900F0C3DA /* Product_VC.swift in Sources */,
+				03E29A7D22FCACE9007D97E8 /* ordersTableViewCell.swift in Sources */,
 				03236C4122DE895400F0C3DA /* UfoTechProducts.xcdatamodeld in Sources */,
 				03C95BB522E274A00006F679 /* AllReportVC.swift in Sources */,
 				03C01DFB22F8E785001B77DE /* prodOrdersUpdate.swift in Sources */,
@@ -175,6 +182,7 @@
 				03C95BB722E3B2160006F679 /* ReportTableViewCell.swift in Sources */,
 				03236C3922DE895400F0C3DA /* AppDelegate.swift in Sources */,
 				03C01DF722F5DDC5001B77DE /* AllOrdersReport_VC.swift in Sources */,
+				03E29A7B22FCABE2007D97E8 /* ordersTableReportVC.swift in Sources */,
 				03C95BBB22E4B53D0006F679 /* StockQuantity_VC.swift in Sources */,
 				03236C4E22DE898100F0C3DA /* UfoTech_Merchants.swift in Sources */,
 			);

@@ -46,15 +46,37 @@ class reportsMainMenuVC: UIViewController {
         
     }
     
-    //All Orders Reports
+    
+    //Orders TableView with Idetifier (ordersReport)
+    
+    
+    //All Orders Reports with Identifier
     @IBAction func allOrdersReportActionButton(_ sender: UIButton) {
         
-        //Programatically go to the Orders View controller - Identifier (allOrdersRptVC)
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let rptAllOrders = storyBoard.instantiateViewController(withIdentifier: "allOrdersRptVC") as! AllOrdersReport_VC
-            self.present(rptAllOrders , animated: true, completion: nil)
+        //All Orders with - Identifier (ordersReport)
+        
+        //Set StoryBoard
+        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //Set OrdersReport
+        let allOrdersRpt = mainStoryBoard.instantiateViewController(withIdentifier: "ordersReport") as! ordersTableReportVC
+        
+        //Call tableview Function
+        self.present(allOrdersRpt,animated: true, completion: nil)
+        
         
     }
+    
+    //Orders Search Button with Identifier ((allOrdersRptVC)
+    @IBAction func ordersSrchActionButton(_ sender: UIButton) {
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let rptAllOrders = storyBoard.instantiateViewController(withIdentifier: "allOrdersRptVC") as! AllOrdersReport_VC
+        self.present(rptAllOrders , animated: true, completion: nil)
+        
+    }
+    
+    
     
     //Back to home menu Identifier MainMenuVC
     @IBAction func homeMenuActionItem(_ sender: UIBarButtonItem) {
