@@ -306,8 +306,6 @@ class OrderForm_VC: UIViewController {
                             
                             orderCostOutletLabel.text = "Total Cost: £\(String(ordCost))"
                             
-                            //Assign Ordercost to global variable
-                            globalOrderCost = ordCost
                             
                             
                             //Infomation screen
@@ -334,19 +332,7 @@ class OrderForm_VC: UIViewController {
             } catch {
                             print("Catch Error!!!")
             }
-        
-            //save record
-        
-        do {
-            try context.save()
-            
-            
-        } catch {
-            
-            print("Unable to update record")
-        }
-        
-    
+  
         
         
 }
@@ -481,6 +467,9 @@ class OrderForm_VC: UIViewController {
         //Calculate
         tempCost = convertUnitCost * convertQuantity
         print("Total Order cost is \(tempCost)")
+        
+        //Assign global variable updated order cost
+        globalOrderCost = tempCost
         
         return tempCost
     }
