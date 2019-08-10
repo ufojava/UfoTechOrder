@@ -15,7 +15,10 @@ class prodOrdersUpdate: UIViewController {
     @IBOutlet weak var menuImageOutletView: UIImageView!
     @IBOutlet weak var optionsImageOutletView: UIImageView!
     @IBOutlet weak var updateDeleteProduceOutletButton: UIButton!
-    @IBOutlet weak var updateDeleteOutletOrdersButton: UIButton!
+    @IBOutlet weak var deleteOrdersOutletButton: UIButton!
+    @IBOutlet weak var updateOrdersOutletButton: UIButton!
+    
+    
     
     
 
@@ -57,12 +60,19 @@ class prodOrdersUpdate: UIViewController {
         updateDeleteProduceOutletButton.layer.shadowOffset = CGSize(width: 10, height: 10)
         
         //Format Option Buttons
-        updateDeleteOutletOrdersButton.setTitleColor(.blue, for: .normal)
-        updateDeleteOutletOrdersButton.backgroundColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
-        updateDeleteOutletOrdersButton.layer.shadowOpacity = 1
-        updateDeleteOutletOrdersButton.layer.shadowRadius = 5
-        updateDeleteOutletOrdersButton.layer.cornerRadius = 10
-        updateDeleteOutletOrdersButton.layer.shadowOffset = CGSize(width: 10, height: 10)
+        deleteOrdersOutletButton.setTitleColor(.blue, for: .normal)
+        deleteOrdersOutletButton.backgroundColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
+        deleteOrdersOutletButton.layer.shadowOpacity = 1
+        deleteOrdersOutletButton.layer.shadowRadius = 5
+        deleteOrdersOutletButton.layer.cornerRadius = 10
+        deleteOrdersOutletButton.layer.shadowOffset = CGSize(width: 10, height: 10)
+        
+        updateOrdersOutletButton.setTitleColor(.blue, for: .normal)
+        updateOrdersOutletButton.backgroundColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
+        updateOrdersOutletButton.layer.shadowOpacity = 1
+        updateOrdersOutletButton.layer.shadowRadius = 5
+        updateOrdersOutletButton.layer.cornerRadius = 10
+        updateOrdersOutletButton.layer.shadowOffset = CGSize(width: 10, height: 10)
         
         
     }
@@ -97,12 +107,46 @@ class prodOrdersUpdate: UIViewController {
         
     }
     
-    //Orders Update and Delete Action Buttons Identifier (updateDeleteMenu)
-    @IBAction func ordersUpdateDeleteActionButton(_ sender: UIButton) {
+
+    /*
+     The notes here is to describe deletion of orders which can be carried out from the Reports Menu.
+     The Produce  / Orders Update menu was originally slated to carry out this task.
+     I will now enable a segue operation to the Single orders report from where a deletion can be performed.
+     The home operation will take use back to the Reports menu.
+     
+     Identifier - allOrdersRptVC - deletetion in orders
+    */
+    
+    @IBAction func deleteOrdersActionButton(_ sender: UIButton) {
+        //Set MainStoryBoard
+        let mainStoryBaord: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //Set Destination
+        let deleteOrders = mainStoryBaord.instantiateViewController(withIdentifier: "allOrdersRptVC") as! AllOrdersReport_VC
+        
+        //Call All Orders function
+        self.present(deleteOrders,animated: true, completion: nil)
+        
+    }
+    
+    //STOPPED HERE***
+    //Update Orders with Identifier (updateOrders) and ViewController (UpdateOrdersForm)
+    @IBAction func updateOrdersAcrionButton(_ sender: UIButton) {
+        
+        //Set main StoryBoard
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //Set Destination VC
+        let ordersUpdateForm = mainStoryboard.instantiateViewController(withIdentifier: "updateOrders") as! UpdateOrdersForm
+        
+        //Call function
+        self.present(ordersUpdateForm,animated: true,completion: nil)
+        
     }
     
     
-
-
-
+    
+    
+    
+    
 }

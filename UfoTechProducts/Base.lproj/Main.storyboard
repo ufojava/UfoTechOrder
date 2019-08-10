@@ -1475,6 +1475,40 @@
             </objects>
             <point key="canvasLocation" x="759" y="-283"/>
         </scene>
+        <!--Update Orders Form-->
+        <scene sceneID="PFw-I5-agR">
+            <objects>
+                <viewController storyboardIdentifier="updateOrders" id="bu0-d9-OjV" customClass="UpdateOrdersForm" customModule="UfoTechProducts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Vm-Y4-w8s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vpL-N2-boU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Update Orders" id="21K-Vd-CfR">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="lUs-KZ-hf3">
+                                            <connections>
+                                                <action selector="backToUpdateOrdersMenu:" destination="bu0-d9-OjV" id="DxO-3r-4Oh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vpL-N2-boU" secondAttribute="trailing" id="345-Oq-BFL"/>
+                            <constraint firstItem="vpL-N2-boU" firstAttribute="top" secondItem="BcM-bn-UQ3" secondAttribute="top" id="EBi-Yc-zSC"/>
+                            <constraint firstItem="vpL-N2-boU" firstAttribute="leading" secondItem="6Vm-Y4-w8s" secondAttribute="leading" id="hvm-CL-9GA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BcM-bn-UQ3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wtR-zr-Tgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1488" y="-283"/>
+        </scene>
         <!--Prod Orders Update-->
         <scene sceneID="sx3-Ze-cL2">
             <objects>
@@ -1501,14 +1535,14 @@
                                     <constraint firstAttribute="height" constant="109" id="l2t-Sj-jwX"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CyV-Uh-OYT">
-                                <rect key="frame" x="80" y="425" width="255" height="235"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CyV-Uh-OYT">
+                                <rect key="frame" x="52" y="461" width="310" height="228"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="235" id="qjT-Jz-gWp"/>
+                                    <constraint firstAttribute="height" constant="228" id="qjT-Jz-gWp"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rha-XJ-mKK">
-                                <rect key="frame" x="124" y="489" width="169" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rha-XJ-mKK">
+                                <rect key="frame" x="99" y="489" width="203" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="s9v-E1-Obb"/>
                                 </constraints>
@@ -1517,14 +1551,24 @@
                                     <action selector="productUpdateDeleteActionItem:" destination="H9M-XB-7Mb" eventType="touchUpInside" id="F2g-DA-q1f"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfb-If-WO1">
-                                <rect key="frame" x="124" y="553" width="169" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfb-If-WO1">
+                                <rect key="frame" x="99" y="553" width="203" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="UMM-CN-XQA"/>
                                 </constraints>
-                                <state key="normal" title="Update / Delete Orders"/>
+                                <state key="normal" title="Delete Orders"/>
                                 <connections>
-                                    <action selector="ordersUpdateDeleteActionButton:" destination="H9M-XB-7Mb" eventType="touchUpInside" id="Bfq-Cp-4ER"/>
+                                    <action selector="deleteOrdersActionButton:" destination="H9M-XB-7Mb" eventType="touchUpInside" id="XAk-gt-r7J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="el1-kp-2If">
+                                <rect key="frame" x="99" y="612" width="203" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="PVf-cD-wJW"/>
+                                </constraints>
+                                <state key="normal" title="Update Orders"/>
+                                <connections>
+                                    <action selector="updateOrdersAcrionButton:" destination="H9M-XB-7Mb" eventType="touchUpInside" id="xZ1-qx-HRD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="___________________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktp-On-tjY">
@@ -1539,8 +1583,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtv-MN-b6f">
-                                <rect key="frame" x="172" y="329" width="72" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtv-MN-b6f">
+                                <rect key="frame" x="134" y="329" width="168" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1551,33 +1595,39 @@
                             <constraint firstItem="pkM-Zh-Bzw" firstAttribute="bottom" secondItem="3P2-Yi-tds" secondAttribute="bottom" constant="144" id="4Qy-2I-Abm"/>
                             <constraint firstItem="27z-dA-Qkf" firstAttribute="leading" secondItem="TPv-gg-vdN" secondAttribute="leading" id="508-uw-j95"/>
                             <constraint firstItem="pkM-Zh-Bzw" firstAttribute="trailing" secondItem="P3j-4s-qHl" secondAttribute="trailing" constant="275" id="5bB-Ev-DCI"/>
+                            <constraint firstItem="Gfb-If-WO1" firstAttribute="trailing" secondItem="el1-kp-2If" secondAttribute="trailing" id="6JM-7t-ANA"/>
                             <constraint firstItem="ktp-On-tjY" firstAttribute="trailing" secondItem="3P2-Yi-tds" secondAttribute="trailing" id="78h-yV-fSg"/>
                             <constraint firstItem="Rha-XJ-mKK" firstAttribute="trailing" secondItem="Gfb-If-WO1" secondAttribute="trailing" id="82b-jI-3XF"/>
-                            <constraint firstItem="3P2-Yi-tds" firstAttribute="top" secondItem="CyV-Uh-OYT" secondAttribute="bottom" constant="37" id="CL0-1q-si3"/>
+                            <constraint firstItem="3P2-Yi-tds" firstAttribute="top" secondItem="CyV-Uh-OYT" secondAttribute="bottom" constant="8" id="CL0-1q-si3"/>
                             <constraint firstAttribute="trailing" secondItem="27z-dA-Qkf" secondAttribute="trailing" id="DlS-Ai-Oj9"/>
                             <constraint firstItem="Rha-XJ-mKK" firstAttribute="leading" secondItem="Gfb-If-WO1" secondAttribute="leading" id="GvK-k4-8kZ"/>
                             <constraint firstItem="ktp-On-tjY" firstAttribute="top" secondItem="Wtv-MN-b6f" secondAttribute="bottom" constant="8" id="OUt-ko-Jw4"/>
-                            <constraint firstItem="CyV-Uh-OYT" firstAttribute="leading" secondItem="pkM-Zh-Bzw" secondAttribute="leading" constant="80" id="QtX-Wr-sqf"/>
+                            <constraint firstItem="CyV-Uh-OYT" firstAttribute="leading" secondItem="pkM-Zh-Bzw" secondAttribute="leading" constant="52" id="QtX-Wr-sqf"/>
                             <constraint firstItem="ktp-On-tjY" firstAttribute="leading" secondItem="3P2-Yi-tds" secondAttribute="leading" id="TcX-0c-c1K"/>
-                            <constraint firstItem="CyV-Uh-OYT" firstAttribute="top" secondItem="ktp-On-tjY" secondAttribute="bottom" constant="41" id="TjY-ry-fol"/>
+                            <constraint firstItem="CyV-Uh-OYT" firstAttribute="top" secondItem="ktp-On-tjY" secondAttribute="bottom" constant="77" id="TjY-ry-fol"/>
+                            <constraint firstItem="Wtv-MN-b6f" firstAttribute="centerX" secondItem="CyV-Uh-OYT" secondAttribute="centerX" constant="11" id="U6I-f8-VHt"/>
                             <constraint firstItem="P3j-4s-qHl" firstAttribute="leading" secondItem="TPv-gg-vdN" secondAttribute="leadingMargin" id="UON-7z-JSj"/>
                             <constraint firstItem="P3j-4s-qHl" firstAttribute="top" secondItem="27z-dA-Qkf" secondAttribute="bottom" constant="25" id="VFo-H5-nif"/>
+                            <constraint firstItem="Wtv-MN-b6f" firstAttribute="centerX" secondItem="Rha-XJ-mKK" secondAttribute="centerX" constant="17.5" id="ZAa-cy-60t"/>
                             <constraint firstItem="ktp-On-tjY" firstAttribute="leading" secondItem="pkM-Zh-Bzw" secondAttribute="leading" constant="16" id="czz-3E-pBN"/>
-                            <constraint firstItem="Rha-XJ-mKK" firstAttribute="leading" secondItem="pkM-Zh-Bzw" secondAttribute="leading" constant="124" id="ipY-G6-n5b"/>
+                            <constraint firstItem="Rha-XJ-mKK" firstAttribute="leading" secondItem="pkM-Zh-Bzw" secondAttribute="leading" constant="99" id="ipY-G6-n5b"/>
                             <constraint firstItem="CyV-Uh-OYT" firstAttribute="centerX" secondItem="3P2-Yi-tds" secondAttribute="centerX" constant="7.5" id="nDN-w3-qRm"/>
                             <constraint firstItem="27z-dA-Qkf" firstAttribute="top" secondItem="pkM-Zh-Bzw" secondAttribute="top" constant="16" id="poZ-Bk-vlb"/>
                             <constraint firstItem="ktp-On-tjY" firstAttribute="centerX" secondItem="27z-dA-Qkf" secondAttribute="centerX" constant="-7" id="rCE-pj-a3L"/>
                             <constraint firstItem="Gfb-If-WO1" firstAttribute="top" secondItem="Rha-XJ-mKK" secondAttribute="bottom" constant="23" id="scs-TJ-O9t"/>
-                            <constraint firstItem="Wtv-MN-b6f" firstAttribute="leading" secondItem="pkM-Zh-Bzw" secondAttribute="leading" constant="172" id="tPr-hf-KHj"/>
+                            <constraint firstItem="Wtv-MN-b6f" firstAttribute="leading" secondItem="pkM-Zh-Bzw" secondAttribute="leading" constant="134" id="tPr-hf-KHj"/>
                             <constraint firstAttribute="bottom" secondItem="Gfb-If-WO1" secondAttribute="bottom" constant="302" id="wI8-6i-mLq"/>
+                            <constraint firstItem="el1-kp-2If" firstAttribute="top" secondItem="Gfb-If-WO1" secondAttribute="bottom" constant="18" id="wNk-ZF-72l"/>
+                            <constraint firstItem="Gfb-If-WO1" firstAttribute="leading" secondItem="el1-kp-2If" secondAttribute="leading" id="yD7-j9-Lf4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pkM-Zh-Bzw"/>
                     </view>
                     <connections>
+                        <outlet property="deleteOrdersOutletButton" destination="Gfb-If-WO1" id="8D4-lH-6hC"/>
                         <outlet property="menuImageOutletView" destination="P3j-4s-qHl" id="eFg-gE-Wol"/>
                         <outlet property="optionsImageOutletView" destination="CyV-Uh-OYT" id="ZGP-Eu-hpZ"/>
-                        <outlet property="updateDeleteOutletOrdersButton" destination="Gfb-If-WO1" id="F9T-KV-eOf"/>
                         <outlet property="updateDeleteProduceOutletButton" destination="Rha-XJ-mKK" id="RHl-nB-fPu"/>
+                        <outlet property="updateOrdersOutletButton" destination="el1-kp-2If" id="K8V-1c-wtG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="krb-gj-nij" userLabel="First Responder" sceneMemberID="firstResponder"/>
