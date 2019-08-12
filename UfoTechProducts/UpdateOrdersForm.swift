@@ -27,6 +27,13 @@ class UpdateOrdersForm: UIViewController {
     @IBOutlet weak var orderCostOutletText: UITextField!
     @IBOutlet weak var updateOutletButton: UIButton!
     @IBOutlet weak var infoUpdateOutletLabel: UILabel!
+    @IBOutlet weak var refreshOrderCalcOutletButton: UIButton!
+    
+
+    //Calcluator variables
+    var globalUnitCost = Double()
+    var globalQty = Double()
+    var globalOrdCostCalc = Double()
     
     
 
@@ -105,6 +112,13 @@ class UpdateOrdersForm: UIViewController {
         updateOutletButton.layer.cornerRadius = 10
         updateOutletButton.layer.shadowOffset = CGSize(width: 10, height: 10)
         
+        refreshOrderCalcOutletButton.setTitleColor(.blue, for: .normal)
+        refreshOrderCalcOutletButton.backgroundColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
+        refreshOrderCalcOutletButton.layer.shadowOpacity = 1
+        refreshOrderCalcOutletButton.layer.shadowRadius = 5
+        refreshOrderCalcOutletButton.layer.cornerRadius = 10
+        refreshOrderCalcOutletButton.layer.shadowOffset = CGSize(width: 10, height: 10)
+        
         
         
     }
@@ -116,6 +130,12 @@ class UpdateOrdersForm: UIViewController {
         //Call getOrders
         getOrder(inInvoice: searcInvoiceOutletText.text!)
     }
+    
+    //Update Order Cost
+    @IBAction func refreshOrderCostButton(_ sender: UIButton) {
+        orderCalc()
+    }
+    
     
     
 
@@ -164,9 +184,73 @@ class UpdateOrdersForm: UIViewController {
                         
                         print("The invoice number is: \(resInvSearch)")
                         
-                        //Assign the 
+                        //Assign Item Code
+                        guard let resItemCode = result.value(forKey: "itemCode") as? String else {
+                            print("Item Code has nil value")
+                            return
+                        }
+                        
+                        //Assign Itemcode
+                        print("The Item Code is: \(resItemCode)")
+                        itemCodeOutletText.text = resItemCode
+                        
+                        
+                        
+                        //Assign Item
+                        guard let resItem = result.value(forKey: "item") as? String else {
+                            print("Item has nil value")
+                            return
+                        }
+                        
+                        print("The Item is: \(resItem)")
+                        itemOutletText.text = resItem
+                        
+                        //Assign Description
+                        guard let resDesc = result.value(forKey: "itemDescription") as? String else {
+                            print("Description has nil value")
+                            return
+                        }
+                        
+                        print("The Description is: \(resDesc)")
+                        itemDescriptionOutletText.text = resDesc
+                        
+                        //Assign Qunatity
+                        guard let resQty = result.value(forKey: "quantity") as? String else {
+                            print("Quantity has nil value")
+                            return
+                        }
+                        
+                        print("The quantity is: \(resQty)")
+                        quantityOutletText.text = resQty
+                        
+                        //Assing Unit Cost
+                        guard let resUnitCost = result.value(forKey: "unitCost") as? String else {
+                            print("Unit Cost has nil value")
+                            return
+                        }
+                        
+                        print("The Unit Cost is: \(resUnitCost)")
+                        unitCostOutletText.text = resUnitCost
+                        
+                        guard let resOrdCost = result.value(forKey: "orderCost") else {
+                            print("Order Cost has nil value")
+                            return
+                        }
+                        
+                        print("The Order Cost is \(resOrdCost)")
+                        
+                        //Calculate Order Cost
+                         let resUnitCostConvert = (resUnitCost as NSString).doubleValue
+                         let resQtyConvert = (resQty as NSString).doubleValue
+                        
+                         let ordCostCalc = resUnitCostConvert * resQtyConvert
+                        
+                        //Assigning Order Cost
+                        print("The Order Cost is: \(ordCostCalc)")
+                        orderCostOutletText.text = String(ordCostCalc)
                         
                     }
+                    
         }
         
         
@@ -177,6 +261,22 @@ class UpdateOrdersForm: UIViewController {
     
 
 }
+    
+    //Function to update order cost
+    func orderCalc() {
+        
+        if (unitCostOutletText.text != " " && quantityOutletText.text != " ") {
+            
+            globalOrdCostCalc = (unitCostOutletText.text! as NSString).doubleValue * (quantityOutletText.text! as NSString).doubleValue
+            orderCostOutletText.text = String(globalOrdCostCalc)
+            
+        } else {
+            
+            print("Found nil value in one of the calc fields")
+        }
+        
+        
+    }
 
 
 
