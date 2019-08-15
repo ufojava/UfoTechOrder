@@ -1556,6 +1556,7 @@
                                 <state key="normal" title="Update"/>
                                 <connections>
                                     <action selector="updateActionButton:" destination="Zes-rA-Gyk" eventType="touchUpInside" id="eKV-T4-dNm"/>
+                                    <action selector="updateRecordActionButton:" destination="bu0-d9-OjV" eventType="touchUpInside" id="5nX-lv-ntG"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unit Cost" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aOQ-P9-xek">

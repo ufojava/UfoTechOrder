@@ -129,12 +129,23 @@ class UpdateOrdersForm: UIViewController {
         
         //Call getOrders
         getOrder(inInvoice: searcInvoiceOutletText.text!)
+        
+        
     }
     
     //Update Order Cost
     @IBAction func refreshOrderCostButton(_ sender: UIButton) {
         orderCalc()
     }
+    
+    
+    //Update record with new details
+    @IBAction func updateRecordActionButton(_ sender: UIButton) {
+        
+        //Call fuctiontion to update record
+        updateRecord(inInvoice: searcInvoiceOutletText.text!)
+    }
+    
     
     
     
@@ -193,6 +204,7 @@ class UpdateOrdersForm: UIViewController {
                         //Assign Itemcode
                         print("The Item Code is: \(resItemCode)")
                         itemCodeOutletText.text = resItemCode
+        
                         
                         
                         
@@ -204,6 +216,7 @@ class UpdateOrdersForm: UIViewController {
                         
                         print("The Item is: \(resItem)")
                         itemOutletText.text = resItem
+    
                         
                         //Assign Description
                         guard let resDesc = result.value(forKey: "itemDescription") as? String else {
@@ -248,19 +261,103 @@ class UpdateOrdersForm: UIViewController {
                         //Assigning Order Cost
                         print("The Order Cost is: \(ordCostCalc)")
                         orderCostOutletText.text = String(ordCostCalc)
-                        
                     }
                     
-        }
+                        infoSearchOutletLabel.textColor = UIColor.brown
+                        infoSearchOutletLabel.text = "Record Found"
+                    
+                } else {
+                    
+                        infoSearchOutletLabel.textColor = UIColor.red
+                        infoSearchOutletLabel.text = "No record found"
+            }
         
         
         
         } catch {
             print("Unable to find record")
         }
-    
+        
+        
 
 }
+    
+    //Function to update record in the Orders Entity
+    func updateRecord(inInvoice: String) {
+        
+        //Set context
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        //Set the Orders Entiry
+        let ordersEntity = NSFetchRequest<NSFetchRequestResult>(entityName: "Orders")
+            ordersEntity.predicate = NSPredicate(format: "invoiceNo == %@", inInvoice)
+        
+        
+        ordersEntity.returnsObjectsAsFaults = false
+        
+        
+        do {
+            
+            let results = try context.fetch(ordersEntity)
+                if results.count > 0 {
+                    for result in results as! [NSManagedObject] {
+                        guard let resItem = result.value(forKey: "item") as? String else {
+                            print("Nil value found in item")
+                            return
+                        }
+                        
+                            print("Item is: \(resItem)")
+                        
+                            if quantityOutletText.text != " " {
+                                result.setValue(quantityOutletText.text, forKey: "quantity")
+                            }
+                        
+                        
+                            if unitCostOutletText.text != "" {
+                            
+                                result.setValue(unitCostOutletText.text, forKey: "unitCost")
+                            }
+                        
+                        if orderCostOutletText.text != " " {
+                            result.setValue(Double(orderCostOutletText.text!), forKey: "orderCost")
+                        }
+                        
+                        
+                        
+                
+                        
+                        
+                        
+                    }
+            }
+        } catch {
+            print("Record not updated")
+        }
+        
+        
+        
+        
+        
+        
+        
+        do {
+            try context.save()
+            
+            //Output update lable information
+            infoUpdateOutletLabel.textColor = UIColor.blue
+            infoUpdateOutletLabel.text = "Record Updated Successfully"
+            
+            //clear the info lable
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+                self.infoUpdateOutletLabel.text = " "
+            }
+            
+        } catch {
+            
+            print("Unable to update record")
+        }
+        
+    }
     
     //Function to update order cost
     func orderCalc() {
